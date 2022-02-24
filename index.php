@@ -7,9 +7,9 @@ body {font-family:georgia;}
 
 .album{
 border:1px solid #E77DC2;
-border-radius: 5px;
-padding: 5px;
-margin-bottom:5px;
+border-radius: 10px;
+padding: 10px;
+margin-bottom:10px;
 position:relative;   
 }
   
@@ -31,7 +31,7 @@ top:10px;
     <b>Title: </b> ${album.Title}<br />
     <b>Label: </b> ${album.Label}<br />
     <b>Year: </b> ${album.Year}<br />     
-    <b>Writers: </b> ${album.Writers}<br />    
+    <b>Producers: </b> ${album.Producers}<br />    
     <div class="pic"><img src="thumbnails/${album.Image}"/></div>
   </div>`;
   }
