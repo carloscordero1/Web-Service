@@ -5,7 +5,7 @@
   
 body {font-family:georgia;}
 
-.film{
+.album{
 border:1px solid #E77DC2;
 border-radius: 5px;
 padding: 5px;
@@ -25,19 +25,14 @@ top:10px;
 
 <script type="text/javascript">
 
-  function bondTemplate(film){
-    return `<div class="film">
-    <b>Film: </b> ${film.Film}<br />    
-    <b>Title: </b> ${film.Title}<br />    
-    <b>Year: </b> ${film.Year}<br />    
-    <b>Director: </b> ${film.Director}<br />    
-    <b>Producers: </b> ${film.Producers}<br />   
-    <b>Writers: </b> ${film.Writers}<br />    
-    <b>Composer: </b> ${film.Composer}<br />   
-    <b>Bond: </b> ${film.Bond}<br />    
-    <b>Budget: </b> ${film.Budget}<br />
-    <b>BoxOffice: </b> ${film.BoxOffice}<br />
-    <div class="pic"><img src="thumbnails/${film.Image}"/></div>
+  function bondTemplate(album){
+    return `<div class="album">
+    <b>Album: </b> ${album.Album}<br />    
+    <b>Title: </b> ${album.Title}<br />
+    <b>Label: </b> ${album.Label}<br />
+    <b>Year: </b> ${album.Year}<br />     
+    <b>Writers: </b> ${album.Writers}<br />    
+    <div class="pic"><img src="thumbnails/${album.Image}"/></div>
   </div>`;
   }
 
@@ -61,9 +56,9 @@ $(document).ready(function() {
       $("#films").html("");
 
       //load each film via template into div
-      $.each(data.films, function(key, value){
+      $.each(data.albums, function(key, value){
           let str = bondTemplate(value);
-          $("<div></div>").html(str).appendTo("#films");
+          $("<div></div>").html(str).appendTo("#albums");
       });
 
       
@@ -91,10 +86,10 @@ $(document).ready(function() {
 	<body>
 	<h1>The Weeknd Web Service</h1>
 		<a href="year" class="category">The Weeknd Albums By Year</a><br />
-		<h3 id="filmtitle">Title Will Go Here</h3>
+		<h3 id="albumtitle">Title Will Go Here</h3>
     
-		<div id="films">
-			<p>Films will go here</p>
+		<div id="albums">
+			<p>Albums will go here</p>
 		</div>
 <!--
   <div class="film">

@@ -1,18 +1,12 @@
 {
 	"title": "The Weeknd Albums by Year",
-	"films":[
+	"albums":[
 			  {
-				"Film":1,
+				"Album":1,
 				"Title":"Dr. No",
 				"Year":1962,
-				"Director":"Terence Young",
-				"Producers":"Harry Saltzman and Albert R. Broccoli",
 				"Writers":"Richard Maibaum, Johanna Harwood and Berkely Mather",
-				"Composer":"Monty Norman",
-				"Bond":"Sean Connery",
-				"Budget":"$1,000,000.00",
-				"BoxOffice":"$59,567,035.00",
-				"Image":"dr-no.jpg"
+				"Image":"house-of-balloons.jpg"
 			  },
 			  {
 				"Film":23,
