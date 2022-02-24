@@ -6,7 +6,7 @@
 body {font-family:georgia;}
 
 .album{
-border:1px solid #E77DC2;
+border:1px solid #54b3d6;
 border-radius: 10px;
 padding: 10px;
 margin-bottom:10px;
@@ -17,6 +17,46 @@ position:relative;
 position:absolute;
 right:10px;
 top:10px;
+}
+
+
+  
+a {
+  font-size: 30px;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+ background-position: 0;
+}
+
+a:hover::before {
+  width:100%;
 }
 
 
@@ -86,10 +126,10 @@ $(document).ready(function() {
 	<body>
 	<h1>The Weeknd Web Service</h1>
 		<a href="year" class="category">The Weeknd Albums By Year</a><br />
-		<h3 id="albumtitle">Title Will Go Here</h3>
+		<h3 id="albumtitle"></h3>
     
 		<div id="albums">
-			<p>Albums will go here</p>
+			<p></p>
 		</div>
 <!--
   <div class="film">
@@ -110,6 +150,6 @@ $(document).ready(function() {
 -->
 
     
-		<div id="output">Results go here</div>
+		<div id="output"></div>
 	</body>
 </html>
